@@ -1,1 +1,21 @@
-#
+.states{
+    stroke:white;
+}
+.complete{
+    fill:#176258;
+}
+.complete hover{
+    fill:#2B887C;
+}
+.partial{
+    fill:#61A79D;
+}
+.partial hover{
+    fill:#7ABDB3;
+}
+.none{
+    fill:#696969;
+}
+.none hover{
+    fill:#767676;
+}
