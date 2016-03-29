@@ -4,18 +4,26 @@
 .complete{
     fill:#176258;
 }
-.complete hover{
+.complete:hover{
     fill:#2B887C;
 }
 .partial{
     fill:#61A79D;
 }
-.partial hover{
+.partial:hover{
     fill:#7ABDB3;
 }
 .none{
     fill:#696969;
 }
-.none hover{
+.none:hover{
     fill:#767676;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
