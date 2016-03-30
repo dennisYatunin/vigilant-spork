@@ -64,9 +64,9 @@ path, rect {
 
 #container {
 	pointer-events: none;
-	padding-left: 25%;
+	padding-left: 23%;
 	width: 50%;
 	height: 35%;
 	position: fixed;
-	bottom: 5%;
+	bottom: 35%;
 }

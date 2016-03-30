@@ -30,6 +30,7 @@ else {
 	isMapAngle = false;
 }
 var rotatable = d3.select(".rotatable");
+var container = d3.select("#container");
 if (isMapAngle) {
 	window.addEventListener("wheel", function(e) {
 		var evt = window.event || e;
@@ -59,6 +60,10 @@ if (isMapAngle) {
 			rotatable.style(
 				"transform", "rotateX(" + mapAngle + "deg)"
 				);
+			container.style(
+				"bottom", 35+mapAngle/2+"%"
+				);
+			console.log(mapAngle);
 		}
 	});
 }
