@@ -61,7 +61,7 @@ if (isMapAngle) {
 				"transform", "rotateX(" + mapAngle + "deg)"
 				);
 			container.style(
-				"bottom", 35+mapAngle/2+"%"
+				"bottom", 35 + mapAngle / 2 + "%"
 				);
 			console.log(mapAngle);
 		}
@@ -78,17 +78,17 @@ d3.selectAll("path, rect").on("click", function() {
 	}
 	else {
 		curState = newState;
-		drawCharts(curState);
+		drawCharts(curState, true);
 	}
 });
 
 window.onresize = function() {
 	if (curState) {
-		drawCharts(curState);
+		drawCharts(curState, false);
 	}
 }
 
-function drawCharts(state) {
+function drawCharts(state, doTransition) {
 	chart.innerHTML = "";
 	var h = document.getElementById("container").offsetHeight * 5 / 7;
 	var r = h / 2;
@@ -103,7 +103,7 @@ function drawCharts(state) {
 		{label: "Rubio", value: Rubio[state]}, // rubio = fire
 		{label: "Kasich", value: Kasich[state]} // kasich = coral
 		];
-		drawChart(h, r, color, data);
+		drawChart(h, r, color, data, doTransition);
 	}
 	// Democrats
 	if (state in Hillary && state in Sanders) {
@@ -112,16 +112,19 @@ function drawCharts(state) {
 		{label: "Hillary", value: Hillary[state]}, // hillary = royal
 		{label: "Sanders", value: Sanders[state]} // sanders = sky
 		];
-		drawChart(h, r, color, data);
+		drawChart(h, r, color, data, doTransition);
 	}
 }
 
-function drawChart(h, r, color, data) {
-	var svg = d3.select('#container')
+function drawChart(h, r, color, data, doTransition) {
+	var svg = container
 	.append("svg:svg").data([data])
 	.attr("width", h).attr("height", h)
-	.attr("style", "padding: 5%; opacity: 0");
-	svg.transition().style("opacity", 1);
+	.style("padding", "5%");
+	if (doTransition) {
+		svg.style("opacity", 0);
+		svg.transition().style("opacity", 1);
+	}
 	svg.append("defs").html(`
 		<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
 		<feOffset result="offOut" in="SourceGraphic" dx="0" dy="0" />
@@ -148,4 +151,5 @@ function drawChart(h, r, color, data) {
 	    return data[i].value ?
 	    (data[i].label + " (" + data[i].value + ")") : "";
 	}).attr("class", "pie-label");
+	return svg;
 }
