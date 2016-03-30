@@ -58,10 +58,6 @@ path, rect {
 	pointer-events: fill;
 }
 
-.pie-label {
-	font-size: 1vw;
-}
-
 #container {
 	pointer-events: none;
 	padding-left: 23%;

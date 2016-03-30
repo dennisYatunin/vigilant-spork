@@ -9,3 +9,6 @@ The number of delegates pledged to each candidate in this year's presidential pr
 * http://www.realclearpolitics.com/epolls/2016/president/republican_delegate_count.html
 * http://www.realclearpolitics.com/epolls/2016/president/democratic_delegate_count.html
 * http://www.politico.com/2016-election/results/map/president
+
+**Instructions**
+Scroll to see awesome 3D effect!
