@@ -6,6 +6,11 @@ Hillary = {"IA":23,"NH":9,"SC":39,"NV":20,"AL":44,"AK":6,"AR":22,"GA":73,"MA":46
 
 Sanders = {"IA":21,"NH":15,"SC":14,"NV":15,"AL":9,"AK":13,"AR":10,"GA":29,"MA":45,"MN":46,"OL":21,"TN":23,"TX":75,"VT":16,"VA":33,"KS":24,"LA":14,"ME":16,"HI":17,"ID":17,"MI":67,"MS":4,"FL":70,"IL":73,"MO":34,"NC":45,"OH":62,"AZ":30,"UT":26,"CO":38,"NE":15,"WA":25};
 
+Rubio = {"IA":7,"NH":2,"SC":0,"NV":7,"AL":1,"AK":0,"AR":9,"GA":16,"MA":8,"MN":17,"OL":12,"TN":9,"TX":3,"VT":0,"VA":16,"KS":6,"KY":7,"LA":5,"ME":0,"HI":1,"ID":0,"MI":0,"MS":0,"WY":1,"FL":0,"IL":0,"MO":0,"NC":6,"OH":0,"AZ":0,"UT":0};
+
+Kasich = {"IA":1,"NH":4,"SC":0,"NV":1,"AL":0,"AK":0,"AR":0,"GA":0,"MA":8,"MN":0,"OL":0,"TN":0,"TX":0,"VT":8,"VA":5,"KS":1,"KY":7,"LA":0,"ME":2,"HI":0,"ID":0,"MI":17,"MS":0,"WY":0,"FL":0,"IL":5,"MO":0,"NC":9,"OH":66,"AZ":0,"UT":0};
+
+
 var mapAngle = window.getComputedStyle(document.querySelector('.rotatable'));
 mapAngle = (
 	mapAngle.getPropertyValue("-webkit-transform") ||
