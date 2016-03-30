@@ -57,3 +57,30 @@ if (isMapAngle) {
 		}
 	});
 }
+
+var state = d3.select(".states").selectAll("path")
+
+var tooltip = d3.select(".tooltip");
+var close = d3.select("i");
+
+var isDem = true;//Democratic or not
+state.on("click", function(e){//when a state is clicked
+	this.parentNode.appendChild(this);
+	state.classed("active",false);
+	var c = d3.select(this);
+	c.classed("active", true);
+
+	
+		var key = this.className["baseVal"].substring(0,2);//gets state initials
+		console.log(Hillary[key]);
+	if(isDem)
+		c.data([Hillary[key],Sanders[key]]);
+	else
+		c.data([Trump[key],Sanders[key]]);
+	tooltip.style("visibility", "visible");
+});
+
+close.on("click", function(e){//when the tooltip x is clicked
+	tooltip.style("visibility", "hidden");
+	state.classed("active",false);
+});
