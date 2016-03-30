@@ -1,29 +1,56 @@
 .states{
-    stroke:white;
+	stroke: white;
 }
+
 .complete{
-    fill:#176258;
+	fill: #176258;
 }
+
 .complete:hover{
-    fill:#2B887C;
+	fill: #2B887C;
 }
+
 .partial{
-    fill:#61A79D;
+	fill: #61A79D;
 }
+
 .partial:hover{
-    fill:#7ABDB3;
+	fill: #7ABDB3;
 }
+
 .none{
-    fill:#696969;
+	fill: #696969;
 }
+
 .none:hover{
-    fill:#767676;
+	fill: #767676;
 }
+
 .unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	fill: white;
+}
+
+.perspective {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.rotatable {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.fixed {
+	position: absolute;
+	width: 80%;
+	padding-left: 10%;
 }
